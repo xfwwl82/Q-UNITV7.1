@@ -1,0 +1,67 @@
+{
+  "data": {
+    "base_dir": "./data",
+    "parquet_dir": "./data/parquet",
+    "cache_dir": "./data/cache",
+    "industry_dir": "./data/industry",
+    "reports_dir": "./data/reports"
+  },
+  "collector": {
+    "tdx_top_nodes": 5,
+    "tdx_timeout": 3.0,
+    "tdx_bars_per_req": 800,
+    "tdx_total_bars": 2500,
+    "tdx_workers": 8,
+    "tdx_batch_sleep_every": 50,
+    "tdx_batch_sleep_min": 1.0,
+    "tdx_batch_sleep_max": 3.0,
+    "akshare_workers": 2,
+    "akshare_delay_min": 0.3,
+    "akshare_delay_max": 0.8,
+    "akshare_max_retries": 3,
+    "akshare_ratelimit_wait": 30,
+    "baostock_delay_min": 0.5,
+    "baostock_delay_max": 1.0,
+    "baostock_max_retries": 3,
+    "min_bars_threshold": 10,
+    "adjust": "hfq"
+  },
+  "backtest": {
+    "initial_cash": 1000000.0,
+    "commission_rate": 0.0003,
+    "slippage_rate": 0.001,
+    "tax_rate": 0.001,
+    "position_limit": 20,
+    "max_position_pct": 0.2
+  },
+  "risk": {
+    "max_drawdown": 0.2,
+    "max_position_pct": 0.1,
+    "industry_limit": 0.3,
+    "stop_loss_pct": 0.1,
+    "take_profit_pct": 0.2,
+    "trailing_stop_pct": 0.05,
+    "circuit_breaker_cooldown_days": 5
+  },
+  "factors": {
+    "rsrs": {
+      "regression_window": 18,
+      "zscore_window": 600,
+      "enable": true
+    },
+    "alpha": {
+      "momentum_window": 20,
+      "volatility_window": 20,
+      "enable": true
+    }
+  },
+  "strategy": {
+    "rebalance_freq": "daily",
+    "top_n": 20,
+    "min_score": 0.0
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "./logs/q-unity.log"
+  }
+}

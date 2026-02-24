@@ -1,0 +1,35 @@
+# Q-UNITY-V7.1-fixed 依赖包
+
+# 核心数据处理
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+
+# 高性能计算（可选，无则自动降级）
+numba>=0.57.0
+
+# 数据存储
+pyarrow>=12.0.0
+
+# 数据采集
+pytdx>=1.72
+baostock>=0.8.8
+akshare>=1.12.0
+
+# 配置管理
+pyyaml>=6.0
+
+# 日志和工具
+python-dateutil>=2.8.2
+tqdm>=4.65.0
+
+# 可选：数据可视化
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# 可选：Web界面
+flask>=2.3.0
+
+# 开发工具
+pytest>=7.4.0
